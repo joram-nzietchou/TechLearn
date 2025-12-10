@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TechLearn — Livres Tech, Data & Cybersécurité</title>
+  <meta name="description" content="TechLearn — Vitrine de livres en Data Science, Cybersécurité, SI et Communication Digitale. Sélection moderne et fiable." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="TechLearn.svg" alt="TechLearn" class="logo">
+        <span class="brand-name">TechLearn</span>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>Accueil</a></li>
+          <li><a href="produits.html" class="nav-link"><span class="nav-icon">📚</span>Livres</a></li>
+          <li><a href="panier.html" class="nav-link"><span class="nav-icon">ℹ️</span>panier</a></li>
+          <li><a href="contact.html" class="nav-link"><span class="nav-icon">✉️</span>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero / Carousel -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-text">
+          <h1>Des livres tech modernes, clairs et accessibles</h1>
+          <p class="lead">TechLearn propose une collection professionnelle : Data Science, Cybersécurité, Management SI et Communication Digitale.</p>
+          
+          <p>
+            <a href="produits.html" class="btn btn-primary">Voir les livres</a>
+            <a href="#gallery" class="btn btn-ghost">Galerie</a>
+          </p>
+        </div>
+
+        <div class="carousel" id="homeCarousel">
+          <div class="slides">
+
+            <div class="slide active">
+              <img src="DATA/data5.jpg" alt="Data Science">
+              <div class="slide-caption">Data Science — maîtrisez les fondamentaux modernes</div>
+            </div>
+
+            <div class="slide">
+              <img src="CIN/CIN1.jpeg" alt="Cybersécurité">
+              <div class="slide-caption">Cybersécurité — devenez opérationnel</div>
+            </div>
+
+            <div class="slide">
+              <img src="MSI/msi2.jpeg" alt="Systèmes d’Information">
+              <div class="slide-caption">Management SI — architectures et gouvernance</div>
+            </div>
+
+          </div>
+
+          <div class="carousel-controls">
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Categories preview -->
+    <section class="container cards-section">
+      <h2 class="section-title">Nos domaines</h2>
+
+      <div class="cards-grid categories-grid">
+
+        <a class="card category-card" href="data.html">
+          <div class="card-media"><img src="DATA/data4.jpeg" alt="Data Science"></div>
+          <div class="card-body">
+            <h3>Data Science</h3>
+            <p>Apprentissage automatique, statistiques, IA appliquée.</p>
+          </div>
+        </a>
+
+        <a class="card category-card" href="cyber.html">
+          <div class="card-media"><img src="CIN/cin3.jpg" alt="Cybersécurité"></div>
+          <div class="card-body">
+            <h3>Cybersécurité</h3>
+            <p>Réseaux, sécurité offensive, bonnes pratiques professionnelles.</p>
+          </div>
+        </a>
+
+        <a class="card category-card" href="management.html">
+          <div class="card-media"><img src="MSI/msi3.jpeg" alt="Management des SI"></div>
+          <div class="card-body">
+            <h3>Management SI</h3>
+            <p>Gestion des ressources, gouvernance, architecture.</p>
+          </div>
+        </a>
+
+        <a class="card category-card" href="communication.html">
+          <div class="card-media"><img src="ICD/icd1.png" alt="Communication Digitale"></div>
+          <div class="card-body">
+            <h3>Communication Digitale</h3>
+            <p>Stratégie numérique, contenus et médias sociaux.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="container gallery-section">
+      <h2 class="section-title">Galerie des ouvrages</h2>
+      <div class="gallery-grid">
+        <img src="DATA/data3.jpg" alt="Livre 1">
+        <img src="CIN/cin4.jpg" alt="Livre 2">
+        <img src="MSI/msi4.jpeg" alt="Livre 3">
+        <img src="ICD/ICD3.jpeg" alt="Livre 4">
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="container features">
+      <div class="feature">
+        <h3>Conçus pour apprendre vite</h3>
+        <p>Explications claires, exemples concrets, illustrations modernes.</p>
+      </div>
+      <div class="feature">
+        <h3>Programmes alignés 2025</h3>
+        <p>Contenus à jour, adaptés aux écoles, universités et formations pro.</p>
+      </div>
+      <div class="feature">
+        <h3>Disponible en PDF / Papier</h3>
+        <p>Pensé pour être lu en ligne, imprimé ou utilisé en cours.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-left">
+        <p>TechLearn — Collection de livres technologiques. © 2025</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="produits.html">Livres</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

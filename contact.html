@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechLearn – Contact</title>
+
+    <style>
+        /* --- MODE SOMBRE GLOBAL --- */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background-color: #0b1220;
+            color: #e5e7eb;
+        }
+
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            text-decoration:none;
+            color:#e6eef8;
+        }
+        .logo{height:84px}
+        .logo-sm{height:36px}
+        .brand-name{
+             font-weight:700;
+            font-family:Poppins, Inter;
+        }
+        /* --- CONTAINER PRINCIPAL --- */
+        .contact-container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #0f1724;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid #1e293b;
+        }
+
+        .contact-container h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #4f9cff;
+        }
+
+        .contact-container p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* --- FORMULAIRE --- */
+        form {
+            margin-top: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #93c5fd;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            background-color: #0b1220;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            color: #e5e7eb;
+            font-size: 15px;
+            margin-bottom: 20px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4f9cff;
+            box-shadow: 0 0 10px rgba(79, 156, 255, 0.3);
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        /* --- BOUTON --- */
+        button {
+            background-color: #4f9cff;
+            border: none;
+            color: #0b1220;
+            padding: 14px 26px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #74b2ff;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 18px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+<a class="brand" href="index.html">
+        <img src="TechLearn.svg" alt="TechLearn" class="logo">
+        <span class="brand-name">TechLearn</span>
+</a>
+
+<section class="contact-container">
+    <h2>Contactez-nous</h2>
+    <p>
+        Vous avez une question, une suggestion ou besoin d'aide ?  
+        Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.
+    </p>
+
+    <form action="" method="POST">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="exemple@mail.com" required />
+
+        <label for="sujet">Sujet</label>
+        <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required />
+
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Écrivez votre message ici..." required></textarea>
+
+        <button type="submit">Envoyer le message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 TechLearn — Tous droits réservés.
+</footer>
+
+</body>
+</html>

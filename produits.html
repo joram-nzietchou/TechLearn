@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Produits — TechLearn</title>
+  <meta name="description" content="Catalogue des livres spécialisés en numérique — TechLearn" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="TechLearn.svg" alt="TechLearn" class="logo">
+        <span class="brand-name">TechLearn</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>Accueil</a></li>
+          <li><a href="produits.html" class="nav-link active"><span class="nav-icon">📚</span>Livres</a></li>
+          <li><a href="panier.html" class="nav-link"><span class="nav-icon">🛒</span>Panier</a></li>
+          <li><a href="contact.html" class="nav-link"><span class="nav-icon">✉️</span>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- BARRE DE RECHERCHE -->
+    <section class="search-bar">
+      <input id="globalSearch" type="search" 
+             placeholder="Rechercher un livre par titre, auteur ou sujet..." 
+             aria-label="Rechercher livres">
+    </section>
+
+    <!-- CATÉGORIES -->
+    <section>
+      <h1 class="section-title">Nos catégories spécialisées</h1>
+      <div class="cards-grid categories-grid">
+        <a class="card category-card" href="#" onclick="filterCategory('data_science'); return false;">
+          <div class="card-media">
+            <img src="DATA/data1.jpg" alt="Data Science">
+          </div>
+          <div class="card-body">
+            <h3>Data Science</h3>
+            <p>Machine Learning, statistiques, visualisation de données</p>
+          </div>
+        </a>
+
+        <a class="card category-card" href="#" onclick="filterCategory('cyber'); return false;">
+          <div class="card-media">
+            <img src="CIN/cin3.jpg" alt="Cyber Sécurité">
+          </div>
+          <div class="card-body">
+            <h3>Cyber Sécurité</h3>
+            <p>Sécurité des réseaux, investigation numérique, ethical hacking</p>
+          </div>
+        </a>
+
+        <a class="card category-card" href="#" onclick="filterCategory('msi'); return false;">
+          <div class="card-media">
+            <img src="MSI/msi2.jpeg" alt="Management SI">
+          </div>
+          <div class="card-body">
+            <h3>Management SI</h3>
+            <p>Gouvernance IT, architecture des systèmes, transformation digitale</p>
+          </div>
+        </a>
+
+        <a class="card category-card" href="#" onclick="filterCategory('communication'); return false;">
+          <div class="card-media">
+            <img src="ICD/icd1.png" alt="Communication Digitale">
+          </div>
+          <div class="card-body">
+            <h3>Communication Digitale</h3>
+            <p>Stratégie digitale, marketing, création de contenu, réseaux sociaux</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- TOUS LES LIVRES -->
+    <section>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+        <h2 class="section-title" style="margin: 0;">Tous les livres</h2>
+        <div style="display: flex; gap: 10px;">
+          <button onclick="filterCategory('all')" class="btn-ghost" style="padding: 10px 20px;">Afficher tout</button>
+          <a href="panier.html" class="btn-primary" style="padding: 10px 20px;">Voir mon panier</a>
+        </div>
+      </div>
+      <div id="productsGrid" class="cards-grid products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>TechLearn — Librairie spécialisée en numérique 2025. Tous droits réservés.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Livres</a>
+        <a href="panier.html">Panier</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Nous suivre</h4>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

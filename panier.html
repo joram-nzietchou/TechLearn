@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Panier — TechLearn</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Panier d'achat — TechLearn">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="TechLearn.svg" alt="TechLearn" class="logo">
+        <span class="brand-name">TechLearn</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>Accueil</a></li>
+          <li><a href="produits.html" class="nav-link"><span class="nav-icon">📚</span>Livres</a></li>
+          <li><a href="panier.html" class="nav-link active"><span class="nav-icon">🛒</span>Panier</a></li>
+          <li><a href="contact.html" class="nav-link"><span class="nav-icon">✉️</span>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Mon panier</h1>
+
+    <!-- LISTE DU PANIER -->
+    <div id="cartItems" class="cart-list" aria-live="polite"></div>
+
+    <!-- TOTAL & OPTIONS -->
+    <div class="cart-summary">
+      <div class="cart-info">
+        <div class="cart-stats">
+          <div class="muted">Livres différents : <span id="cartCount">0</span></div>
+          <div class="muted">Total articles : <span id="cartQtyTotal">0</span></div>
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <div class="muted">Sous-total :</div>
+        <div id="cartTotal" class="cart-total">0,00 €</div>
+      </div>
+      <div class="cart-buttons">
+        <button id="clearCart" class="btn-clear">Vider le panier</button>
+        <a href="produits.html" class="btn-continue">Continuer mes achats</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: var(--card); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+      <p style="color: var(--muted); margin: 0; font-size: 0.95rem; line-height: 1.6;">
+        <strong>⚠️ Note importante :</strong> Ce site est une démonstration pédagogique. 
+        Le panier utilise le stockage local de votre navigateur pour simuler une expérience d'achat. 
+        Aucun paiement réel ne sera effectué et aucune commande ne sera traitée.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="TechLearn.svg" alt="TechLearn" class="logo-sm">
+        <p>TechLearn — Librairie spécialisée en numérique 2025. Tous droits réservés.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Livres</a>
+        <a href="panier.html">Panier</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Nous suivre</h4>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <script src="products.js"></script>
+  <script src="main.js"></script>
+  
+  <script>
+    // Gestion du bouton retour en haut
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        });
+        
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Initialiser le compteur du panier
+      if (typeof updateCartCount === 'function') {
+        updateCartCount();
+      }
+    });
+  </script>
+</body>
+</html>
